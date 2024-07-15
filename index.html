@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+
+    <div class="loading-screen ">
+      <i class="fa fa-spinner fa-spin fa-5x loader"></i>
+  </div>
+
+<aside class="side-bar ">
+  <div class="left-nav p-4 bg-black text-white d-flex flex-column justify-content-between ">
+
+    <div class="links-header">
+      <ul class="list-unstyled overflow-hidden">
+        <li class="search">search </li>
+        <li class="categories">categories </li>
+        <li class="area">area </li>
+        <li class="ingradients">ingradients </li>
+        <li class="contact">contact us </li>
+ 
+      </ul>
+    </div>
+
+      <div class="links-footer">
+        <div class="icons d-flex ">
+         <a href="https://facebook.com" target="_blank" >  <i class="fa-brands fa-facebook"></i></a>
+         <a href="https://twitter.com" target="_blank">  <i class="fa-brands fa-twitter"></i></a>
+         <a href="https://google.com" target="_blank">  <i class="fa-solid fa-globe"></i></a>
+
+  
+        </div>
+        <p>Copyright Yousef Aboschwaly <br> 2024 All  Rights
+          Reserved.</p>
+      </div>
+
+  </div>
+
+
+
+  <div class="right-nav py-4 px-2 bg-white text-black">
+
+    <div class="right-icons ">
+      <img src="./images/logo.png" alt="" >
+      <i class="fa-solid open-close-icon fa-2x fa-x"></i>
+      <div class="icons d-flex flex-column">
+        <a href="https://google.com"> <i class="fa-solid fa-globe"></i></a>
+        <a href="#"> <i class="fa-solid fa-share-nodes"></i></a>
+      </div>    
+    
+    </div>
+
+
+  </div>
+
+
+</aside>
+
+
+
+
+    <section class="home p-md-5 py-5 ps-5">
+      <div class="container-fluid px-md-5  ">
+
+
+        <div class="search-area ">
+
+          <div class="search-inputs"></div>
+          <div class="row gy-4  mealsSearched">
+
+      
+          </div>
+
+        </div>
+
+        <div class="ctegory-area">
+          <div class="row gy-4 main-cat ">
+
+      
+          </div>
+          <div class="row gy-4 sec-cat ">
+
+      
+          </div>
+        </div>
+
+        
+        
+        <div class="area-area">
+          <div class="row gy-4 main-area ">
+
+      
+          </div>
+          <div class="row gy-4 sec-area ">
+
+      
+          </div>
+        </div>
+
+
+        <div class="ingrad-area">
+          <div class="row gy-4 main-ingrad ">
+
+      
+          </div>
+          <div class="row gy-4 sec-ingrad ">
+
+      
+          </div>
+        </div>
+        
+
+        <div class="row gy-4  first">
+
+
+      
+        </div>
+
+        <div class="home-details second  d-none">
+
+          <div class="row ">
+            <div class="col-md-4">
+              <div class="details-img">
+
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="inst">
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="contact-us text-center d-none   position-relative">
+
+          <div class="position-absolute">
+            <button class="btn-close btn-close-white ms-auto " id="btnClose" onclick="closeContact()"></button>
+          </div>
+
+
+
+          <div class="container px-md-5 mt-5 pt-5">
+
+          <div class="row gy-4 mx-md-5 mt-5 pt-5">
+
+           
+            <div class="col-md-6">
+            <div>
+              <input type="text" id="name" class="form-control" placeholder="Enter Your Name " oninput=" isAllValid()">
+              <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                 Special characters and numbers not allowed
+             </div>
+            </div>
+            </div>
+  
+            
+  
+            <div class="col-md-6">
+              <div>
+                <input type="email" id="email" class="form-control" placeholder="Enter Your Email" oninput=" isAllValid()">
+                <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Email not valid *exemple@yyy.zzz
+               </div>
+              </div>
+            </div>
+  
+  
+            <div class="col-md-6">
+              <div>
+                <input type="text" id="phone" class="form-control" placeholder="Enter Your Phone "oninput="isAllValid()">
+
+
+                <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid Phone Number
+                               </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div>
+                <input type="number" id="age" class="form-control" placeholder="Enter Your Age" oninput="isAllValid()" >
+                <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid age
+              </div>
+              </div>
+            </div>
+  
+  
+            <div class="col-md-6">
+              <div>
+                <input type="password" id="pass" class="form-control" placeholder="Enter Your Password" oninput="isAllValid()">
+                <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid password *Minimum eight characters, at least one letter and one number:*
+                               </div>
+              </div>
+            </div>
+  
+  
+            <div class="col-md-6">
+              <div>
+
+                <input type="password"id='repass' class="form-control" placeholder="Repassword" oninput="isAllValid()">
+                <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                  Enter valid repassword
+               </div>
+              </div>
+            </div>
+
+
+            <div>
+              <button id="submitBtn"  class="btn btn-outline-danger px-2 mt-4" disabled="true" >Submit</button>
+  
+            </div>
+           
+    
+            </div>
+
+
+          </div>
+
+        </div>
+  
+
+          
+  
+        
+        
+      </div>
+    </section>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
